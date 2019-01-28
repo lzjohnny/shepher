@@ -22,14 +22,18 @@
         <form id="form-index" action="?" method="?">
             <div class="row placeholder">
                 <button class="btn btn-success rowbtn" id="delete-button"
-                        onclick="showDeleteModal(); return false;" <#if !hasDeletePermission || hasChild!>disabled</#if>>Delete
+                        onclick="showDeleteModal(); return false;" <#if !hasDeletePermission>disabled</#if>>Delete
                 </button>
                 <button class="btn btn-success rowbtn" id="create-button" onclick="onCreate('${path?url}'); return false;">Create
                 </button>
                 <button class="btn btn-success rowbtn" id="update-button"
                         onclick="showUpdateModal(); return false;" <#if !hasPermission>disabled</#if>>Update
                 </button>
-                <button class="btn btn-success rowbtn" id="import-button" onclick="showImportModal(); return false;" <#if !hasPermission>disabled</#if>>Import
+                <button class="btn btn-success rowbtn" id="replace-button"
+                        onclick="showReplaceModal(); return false;" <#if !hasPermission>disabled</#if>>Replace
+                </button>
+                <button class="btn btn-success rowbtn" id="import-button"
+                        onclick="showImportModal(); return false;" <#if !hasPermission>disabled</#if>>Import
                 </button>
                 <label class="checkbox" for="editable">
                     <input type="checkbox" value="" id="editable" data-toggle="checkbox"
@@ -65,6 +69,7 @@
 <#include "update-modal.ftl">
 <#include "stat-modal.ftl">
 <#include "import-modal.ftl">
+<#include "replace-modal.ftl">
 <#include "../script.ftl">
 
 <script>
@@ -115,6 +120,12 @@
         })
     }
 
+    function showReplaceModal() {
+        $('#replaceModal').modal({
+            keyboard: true
+        })
+    }
+
     function onButtonClick(form, action, path, method) {
         form.attr('action', action);
         form.attr('method', method);
@@ -122,6 +133,12 @@
     }
 
     function onImportButtonClick(form, action, method) {
+        form.action = action;
+        form.method = method;
+        form.submit();
+    }
+
+    function onReplaceButtonClick(form, action, method) {
         form.action = action;
         form.method = method;
         form.submit();

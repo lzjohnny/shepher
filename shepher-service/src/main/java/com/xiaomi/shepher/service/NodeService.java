@@ -123,6 +123,23 @@ public class NodeService {
         logger.info("Update node, cluster={}, path={}, operator={}", cluster, path, creator);
     }
 
+    public void recursiveDelete(String cluster, String path, String creator) throws ShepherException {
+        List<String> children = this.getChildren(cluster, path);
+        for (String child : children) {
+            String newPath = "";
+            if (path.equals("/")) {
+                newPath = "/" + child;
+            } else {
+                newPath = path + "/" + child;
+            }
+            this.recursiveDelete(cluster, newPath, creator);
+        }
+
+        if (path != null) {
+            this.delete(cluster, path, creator);
+        }
+    }
+
     public void delete(String cluster, String path, String creator) throws ShepherException {
         nodeBiz.delete(cluster, path);
         long snapshotId = snapshotBiz.create(cluster, path, ReviewUtil.EMPTY_CONTENT, creator, Action.DELETE, ReviewUtil.DEFAULT_MTIME,

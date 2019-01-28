@@ -102,7 +102,6 @@ public class NodeController {
         boolean hasDeletePermission = permissionService.isPathMaster(userId, cluster, path);
 
         model.addAttribute("children", children);
-        model.addAttribute("hasChild", !children.isEmpty());
         model.addAttribute("data", StringEscapeUtils.escapeHtml4(nodeService.getData(cluster, path)));
         model.addAttribute("stat", nodeService.getStat(cluster, path));
         model.addAttribute("path", path);
@@ -166,7 +165,7 @@ public class NodeController {
     public String delete(@RequestParam("path") String path, @PathVariable("cluster") String cluster, Model model) throws ShepherException {
         User user = userHolder.getUser();
         String parentPath = ParentPathParser.getParent(path);
-        nodeService.delete(cluster, path, user.getName());
+        nodeService.recursiveDelete(cluster, path, user.getName());
         return "redirect:/clusters/" + cluster + "/nodes?path=" + ParamUtils.encodeUrl(parentPath);
     }
 
@@ -223,5 +222,15 @@ public class NodeController {
         nodeService.create(cluster, path, data, user.getName());
 
         return "redirect:/clusters/" + cluster + "/nodes?path=" + ParamUtils.encodeUrl(path);
+    }
+
+    @RequestMapping(value = "/replace", method = RequestMethod.POST)
+    public String replace(@RequestParam(value = "srcPath", defaultValue = "/") String srcPath,
+                          @RequestParam(value = "srcCluster", defaultValue = "") String srcCluster,
+                          @RequestParam(value = "dstPath", defaultValue = "/") String dstPath,
+                          @RequestParam(value = "dstCluster", defaultValue = "") String dstCluster, Model model)
+            throws ShepherException {
+
+        return "redirect:/";
     }
 }
