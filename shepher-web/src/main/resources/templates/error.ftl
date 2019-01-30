@@ -20,10 +20,11 @@
 <div class="container">
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3 class="panel-title">Shepher Error Page</h3>
+            <h3 class="panel-title">Error Page</h3>
         </div>
         <div class="panel-body">
-            <p>${message!} ,click <a href="#" onClick="onClick()">here</a> to home page</p>
+            <p>${message}</p>
+            <p>click <a href="#" onClick="onClick()">here</a> to home page</p>
         </div>
     </div>
 </div>

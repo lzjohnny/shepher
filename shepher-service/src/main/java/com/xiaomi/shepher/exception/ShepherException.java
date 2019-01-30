@@ -98,6 +98,10 @@ public class ShepherException extends Exception {
         return new ShepherException(ExceptionEnum.UNKNOWN_ERROR);
     }
 
+    public static ShepherException createUnknownException(Exception exception) {
+        return new ShepherException(7001, exception.getMessage());
+    }
+
     public static ShepherException createUserExistsException() {
         return new ShepherException(ExceptionEnum.USEREXISTS_ERROR);
     }

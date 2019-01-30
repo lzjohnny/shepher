@@ -49,7 +49,7 @@ public class NodeDAO {
             return zkClient.getChildren(path);
         } catch (Exception e) {
             LOGGER.warn("Fail to get children, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -79,7 +79,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to get data, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -97,7 +97,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to get data, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -133,7 +133,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to create node, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -154,7 +154,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to create node, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -175,7 +175,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to create ephemeral, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -201,7 +201,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to create node, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -222,7 +222,7 @@ public class NodeDAO {
             LOGGER.warn("Success to update node, but throw exception", e);
         } catch (Exception e) {
             LOGGER.warn("Fail to update node, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -240,7 +240,7 @@ public class NodeDAO {
             throw ShepherException.createNoNodeException();
         } catch (Exception e) {
             LOGGER.warn("Fail to delete node, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
@@ -255,7 +255,7 @@ public class NodeDAO {
             return zkClient.getCreationTime(path);
         } catch (Exception e) {
             LOGGER.warn("Fail to get creation time, Exception:", e);
-            throw ShepherException.createUnknownException();
+            throw ShepherException.createUnknownException(e);
         } finally {
             ZkPool.releaseZkClient(cluster, zkClient);
         }
