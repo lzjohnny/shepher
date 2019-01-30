@@ -7,21 +7,21 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Update Cluster
+                    更新集群
                 </h4>
             </div>
             <form class="form-horizontal" id="update-cluster" action="?">
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="update-name" class="col-lg-2 control-label">Name</label>
+                            <label for="update-name" class="col-lg-2 control-label">集群名称</label>
                             <div class="col-lg-10">
                                 <input name="name" type="text" class="form-control input-sm" id="update-name"
                                        placeholder="Name" readonly/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="cluster-config" class="col-lg-2 control-label">Config</label>
+                            <label for="cluster-config" class="col-lg-2 control-label">Host:Port</label>
                             <div class="col-lg-10">
                                 <input name="config" type="text" class="form-control input-sm" id="cluster-config"
                                        placeholder="Config">

@@ -18,11 +18,11 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-expanded="false">${cluster?default("Clusters")} <span
+                       aria-expanded="false">当前集群: ${cluster?default("未选择")} <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                     <#list clusters as cluster>
-                        <li><a href="/clusters/${cluster.name}/nodes">当前集群: ${cluster.name}</a></li>
+                        <li><a href="/clusters/${cluster.name}/nodes">${cluster.name}</a></li>
                     </#list>
                     </ul>
                 </li>

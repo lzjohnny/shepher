@@ -7,14 +7,14 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Delete Cluster
+                    删除集群
                 </h4>
             </div>
             <form class="form-horizontal" id="add-cluster" action="?">
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="delete-name" class="col-lg-2 control-label">Name</label>
+                            <label for="delete-name" class="col-lg-2 control-label">集群名称</label>
                             <div class="col-lg-10">
                                 <input name="name" type="text" class="form-control input-sm" id="delete-name"
                                        placeholder="Name"

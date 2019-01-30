@@ -12,9 +12,9 @@
                 <h6>Parent Node: ${path!}</h6>
                 <input type="text" class="form-control placeholder" placeholder="Child Node" name="child" id="child"
                        value="">
-                <button class="btn btn-success" id="create-button" onclick="showCreateModal(); return false;">Create
+                <button class="btn btn-success" id="create-button" onclick="showCreateModal(); return false;">创建节点
                 </button>
-                <button class="btn btn-default" id="cancel-button" onclick="onCancel('${path?url}'); return false;">Back
+                <button class="btn btn-default" id="cancel-button" onclick="onCancel('${path?url}'); return false;">返回
                 </button>
                 <div class="formatRadio">
 

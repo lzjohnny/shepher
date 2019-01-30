@@ -7,12 +7,12 @@
 <div class="container">
     <div>
         <table class="table table-striped">
-            <caption class="caption"><h4>Joined Teams</h4></caption>
+            <caption class="caption"><h4>已加入小组</h4></caption>
         <#if teams?has_content>
             <thead>
             <tr>
-                <th class="col-md-4">Team Name</th>
-                <th class="col-md-4">Role</th>
+                <th class="col-md-4">小组</th>
+                <th class="col-md-4">角色</th>
             </tr>
             </thead>
             <tbody>

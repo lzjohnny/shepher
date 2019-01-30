@@ -8,14 +8,14 @@
     <div>
         <form id="form-manage" action="?" method="POST">
             <table class="table table-striped">
-                <caption class="caption"><h4>Super Admin Management</h4></caption>
+                <caption class="caption"><h4>小组权限管理</h4></caption>
                 <thead>
                 <tr>
-                    <th class="col-md-2">Team</th>
-                    <th class="col-md-2">Cluster</th>
-                    <th class="col-md-2">Path</th>
-                    <th class="col-md-2">Status</th>
-                    <th class="col-md-2">Operation</th>
+                    <th class="col-md-2">小组</th>
+                    <th class="col-md-2">授权集群</th>
+                    <th class="col-md-2">授权目录</th>
+                    <th class="col-md-2">授权状态</th>
+                    <th class="col-md-2">授权管理</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,7 +57,7 @@
     </div>
     <div>
         <button class="btn btn-success btn-sm pull-right" id="authorize-button"
-                onclick="showModal('#addModal');return false;">Authorize
+                onclick="showModal('#addModal');return false;">添加授权
         </button>
     </div>
 </div>

@@ -6,12 +6,12 @@
 
 <div class="container">
     <table class="table table-striped">
-        <caption class="caption"><h4>Shepher Clusters Management</h4></caption>
+        <caption class="caption"><h4>Zookeeper集群管理</h4></caption>
         <thead>
         <tr>
-            <th class="col-md-2">Name</th>
-            <th class="col-md-8">Config</th>
-            <th class="col-md-2">Operation</th>
+            <th class="col-md-2">集群名称</th>
+            <th class="col-md-8">Host:Port</th>
+            <th class="col-md-2">管理</th>
         </tr>
         </thead>
         <tbody>
@@ -33,7 +33,7 @@
             <td></td>
             <td></td>
             <td>
-                <button class="btn btn-success btn-xs" href="#" onclick="showCreateModal(); return false;">Add</button>
+                <button class="btn btn-success btn-xs" href="#" onclick="showCreateModal(); return false;">添加集群</button>
             </td>
         </tr>
         </tbody>
