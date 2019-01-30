@@ -9,7 +9,7 @@
     <div class="col-md-5">
         <form class="form-horizontal" action="/login" method="POST">
             <fieldset>
-                <legend>用户登录</legend>
+                <legend>用户登录(用户名:dev 密码123456)</legend>
                 <div class="form-group">
                     <label for="inputUsername" class="col-lg-2 control-label">用户名</label>
                     <div class="col-lg-10">
