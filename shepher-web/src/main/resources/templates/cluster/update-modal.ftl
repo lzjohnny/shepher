@@ -7,7 +7,7 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Confirm Operation
+                    确认操作
                 </h4>
             </div>
             <div class="modal-body">
@@ -20,10 +20,10 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-success"
                         onclick="onButtonClick($('#form-index'), '/clusters/${cluster}/nodes/update', '${path}', 'POST'); return false;">
-                    Confirm
+                    确定
                 </button>
                 <button type="button" class="btn btn-default"
-                        data-dismiss="modal">Cancel
+                        data-dismiss="modal">取消
                 </button>
             </div>
         </div>

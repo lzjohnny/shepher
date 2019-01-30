@@ -14,7 +14,7 @@
                     value="${path!}"
                     onkeydown="onSearch(event)">
                     <span class="input-group-btn">
-                  <button type="submit" class="btn btn-success">Search</button>
+                  <button type="submit" class="btn btn-success">转到</button>
                 </span>
                 </div>
             </form>
@@ -22,34 +22,33 @@
         <form id="form-index" action="?" method="?">
             <div class="row placeholder">
                 <button class="btn btn-success rowbtn" id="delete-button"
-                        onclick="showDeleteModal(); return false;" <#if !hasDeletePermission>disabled</#if>>Delete
+                        onclick="showDeleteModal(); return false;" <#if !hasDeletePermission>disabled</#if>>删除节点
                 </button>
-                <button class="btn btn-success rowbtn" id="create-button" onclick="onCreate('${path?url}'); return false;">Create
+                <button class="btn btn-success rowbtn" id="create-button" onclick="onCreate('${path?url}'); return false;">创建节点
                 </button>
                 <button class="btn btn-success rowbtn" id="update-button"
-                        onclick="showUpdateModal(); return false;" <#if !hasPermission>disabled</#if>>Update
+                        onclick="showUpdateModal(); return false;" <#if !hasPermission>disabled</#if>>更新节点
                 </button>
                 <button class="btn btn-success rowbtn" id="replace-button"
-                        onclick="showReplaceModal(); return false;" <#if !hasPermission>disabled</#if>>Replace
+                        onclick="showReplaceModal(); return false;" <#if !hasPermission>disabled</#if>>复制节点
                 </button>
                 <button class="btn btn-success rowbtn" id="import-button"
-                        onclick="showImportModal(); return false;" <#if !hasPermission>disabled</#if>>Import
+                        onclick="showImportModal(); return false;" <#if !hasPermission>disabled</#if>>导入数据
                 </button>
                 <label class="checkbox" for="editable">
                     <input type="checkbox" value="" id="editable" data-toggle="checkbox"
                            <#if !hasPermission>disabled</#if>>
-                    Editable
+                    编辑节点数据
                 </label>
                 <div class="formatRadio">
                     <button class="btn btn-primary btn-xs" id="apply-button"
-                            onclick="onApply('${cluster}' ,'${path?url}'); return false;">Apply
-                        Permission
+                            onclick="onApply('${cluster}' ,'${path?url}'); return false;">权限申请
                     </button>
                     <button class="btn btn-primary btn-xs" id="snapshot-button"
-                            onclick="showSnapshotModal(); return false;">Snapshot
+                            onclick="showSnapshotModal(); return false;">节点快照
                     </button>
                     <button class="btn btn-primary btn-xs" id="stat-button"
-                            onclick="showStatModal(); return false;">Stat
+                            onclick="showStatModal(); return false;">集群状态
                     </button>
                 </div>
             </div>

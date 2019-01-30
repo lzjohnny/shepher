@@ -7,14 +7,14 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Replace Data<span id="select-path"></span>
+                    复制节点及其子节点<span id="select-path"></span>
                 </h4>
             </div>
             <form class="form-horizontal" id="replace-node" action="?">
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="cluster-name" class="col-lg-2 control-label">Src Cluster</label>
+                            <label for="cluster-name" class="col-lg-2 control-label">源集群r</label>
                             <div class="col-lg-8">
                                 <select class="form-control input-sm" id="srcCluster" name="srcCluster">
                                     <#list clusters as cluster>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="node-name" class="col-lg-2 control-label">Src Path</label>
+                            <label for="node-name" class="col-lg-2 control-label">源节点路径</label>
                             <div class="col-lg-8" id="user-name-div">
                                 <input name="srcPath" id="srcPath" type="text"
                                     class="form-control input-sm placeholder="Node Path">
@@ -35,7 +35,7 @@
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="cluster-name" class="col-lg-2 control-label">Dst Cluster</label>
+                            <label for="cluster-name" class="col-lg-2 control-label">目标集群</label>
                             <div class="col-lg-8">
                                 <select class="form-control input-sm" id="dstCluster" name="dstCluster">
                                     <#list clusters as cluster>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="node-name" class="col-lg-2 control-label">Dst Path</label>
+                            <label for="node-name" class="col-lg-2 control-label">目标节点路径</label>
                             <div class="col-lg-8" id="user-name-div">
                                 <input name="dstPath" id="dstPath" type="text"
                                     class="form-control input-sm placeholder="Node Path">
@@ -56,10 +56,10 @@
                 <div class="modal-footer">
                     <button type="submit" id="select-path-submit" class="btn btn-success"
                         onclick="onReplaceButtonClick(this.form, '/clusters/${cluster}/nodes/replace', 'POST'); return false;">
-                        Confirm
+                        确定
                     </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                 </div>
             </form>

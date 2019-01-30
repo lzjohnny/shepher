@@ -37,12 +37,12 @@
                     </fieldset>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default"
-                            data-dismiss="modal">Cancel
-                    </button>
                     <button type="button" class="btn btn-success"
                             onclick="onButtonClick(this.form, '/permission/delete', 'POST', 0); return false;">
-                        Confirm
+                        确定
+                    </button>
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">取消
                     </button>
                 </div>
             </form>

@@ -38,10 +38,10 @@
                 <div class="modal-footer">
                     <button type="submit" id="select-path-submit" class="btn btn-success" 
                         onclick="onImportButtonClick(this.form, '/clusters/${cluster}/nodes/update', 'POST'); return false;">
-                        Confirm
+                        确定
                     </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="onCancel()">
-                        Cancel
+                        取消
                     </button>
                 </div>
             </form>

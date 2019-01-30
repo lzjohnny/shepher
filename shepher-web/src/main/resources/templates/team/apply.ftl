@@ -46,7 +46,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="team-submit" class="btn btn-success">
-                        Confirm
+                        确定
                     </button>
                 </div>
 

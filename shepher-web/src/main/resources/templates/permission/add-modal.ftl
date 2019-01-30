@@ -40,10 +40,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-success">
-                        Confirm
+                        确定
                     </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                 </div>
             </form>
