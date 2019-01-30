@@ -48,15 +48,19 @@ public class NodeBiz {
         nodeDAO.create(cluster, path, data);
     }
 
-    public void create(String cluster, String path, String data, boolean createParents)throws ShepherException {
+    public void create(String cluster, String path, String data, boolean createParents) throws ShepherException {
         nodeDAO.create(cluster, path, data, createParents);
     }
 
-    public void createEphemeral(String cluster, String path, String data) throws ShepherException{
+    public void createEphemeral(String cluster, String path, String data) throws ShepherException {
         nodeDAO.createEphemeral(cluster, path, data);
     }
 
     public void delete(String cluster, String path) throws ShepherException {
         nodeDAO.delete(cluster, path);
+    }
+
+    public boolean exists(String cluster, String path) {
+        return nodeDAO.exists(cluster, path);
     }
 }

@@ -18,12 +18,12 @@
                 </fieldset>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">Cancel
-                </button>
                 <button type="button" class="btn btn-success"
                         onclick="onButtonClick($('#form-create'), '/clusters/${cluster}/nodes/create', '${path}'); return false;">
                     Confirm
+                </button>
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">Cancel
                 </button>
             </div>
         </div>

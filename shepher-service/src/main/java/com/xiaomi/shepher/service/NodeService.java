@@ -148,4 +148,28 @@ public class NodeService {
         mailSenderFactory.getMailSender().noticeDelete(masters, creator, path, cluster, serverUrl + "/snapshots/" + snapshotId);
         logger.info("Delete node, cluster={}, path={}, operator={}", cluster, path, creator);
     }
+
+    public void recursiveReplace(String srcCluster, String srcPath, String dstCluster, String dstPath, String creator) throws ShepherException {
+        List<String> children = this.getChildren(srcCluster, srcPath);
+        for (String child : children) {
+            String newSrcPath = "";
+            String newDstPath = "";
+            newSrcPath = (srcPath.equals("/")) ? ("/" + child) : (srcPath + "/" + child);
+            newDstPath = (dstPath.equals("/")) ? ("/" + child) : (dstPath + "/" + child);
+
+            this.recursiveReplace(srcCluster, newSrcPath, dstCluster, newDstPath, creator);
+        }
+
+        if (srcPath != null && dstPath != null) {
+            if (!nodeBiz.exists(dstCluster, dstPath)) {
+                this.create(dstCluster, dstPath, getData(srcCluster, srcPath), creator, true);
+            } else {
+                this.update(dstCluster, dstPath, getData(srcCluster, srcPath), creator);
+            }
+        }
+    }
+
+    public boolean exists(String cluster, String path) {
+        return nodeDAO.exists(cluster, path);
+    }
 }
