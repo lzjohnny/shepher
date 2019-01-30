@@ -62,6 +62,7 @@ public class NodeController {
     private static final Logger logger = LoggerFactory.getLogger(NodeController.class);
 
     private static final String SLASH = "/";
+    private static final String ERROR_PATH = "/error";
 
     @Autowired
     private NodeService nodeService;
@@ -230,13 +231,11 @@ public class NodeController {
                           @RequestParam(value = "dstPath", defaultValue = "/") String dstPath,
                           @RequestParam(value = "dstCluster", defaultValue = "") String dstCluster, Model model)
             throws ShepherException {
-        if (!nodeService.exists(srcCluster, srcPath)) {
-            return "False";
-        }
         if (nodeService.exists(dstCluster, dstPath)) {
             List<String> children = nodeService.getChildren(dstCluster, dstPath);
             if (!children.isEmpty()) {
-                return "False"; // ${dstCluster}集群的${dstPath}节点必须为空！
+                model.addAttribute("message", dstCluster + " 集群 " + dstPath + " 节点必须为空");
+                return ERROR_PATH;
             }
         }
 
