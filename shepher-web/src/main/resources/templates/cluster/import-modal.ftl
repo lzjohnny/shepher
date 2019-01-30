@@ -7,14 +7,14 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Import From<span id="select-path"></span>
+                    导入其他节点数据到当前节点<span id="select-path"></span>
                 </h4>
             </div>
             <form class="form-horizontal" id="import-node" action="?">
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="cluster-name" class="col-lg-2 control-label">Clusters</label>
+                            <label for="cluster-name" class="col-lg-2 control-label">源集群</label>
                             <div class="col-lg-8">
                                 <select class="form-control input-sm" id="srcCluster" name="srcCluster">
                                     <#list clusters as cluster>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="node-name" class="col-lg-2 control-label">Path</label>
+                            <label for="node-name" class="col-lg-2 control-label">源节点路径</label>
                             <div class="col-lg-8" id="user-name-div">
                                 <input name="srcPath" id="srcPath" type="text"
                                     class="form-control input-sm placeholder="Node Path">

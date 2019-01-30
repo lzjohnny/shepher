@@ -13,7 +13,7 @@
             <div class="modal-body">
                 <fieldset>
                     <div class="form-group">
-                        Delete path: ${path}
+                        确认删除节点: ${path}
                     </div>
                 </fieldset>
             </div>

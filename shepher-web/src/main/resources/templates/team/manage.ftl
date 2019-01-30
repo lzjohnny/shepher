@@ -8,23 +8,23 @@
     <div>
         <form id="form-manage" action="?" method="POST">
             <table class="table table-striped">
-                <caption class="caption"><h4>${currentTeam.name}</h4></caption>
+                <caption class="caption"><h4>小组 ${currentTeam.name}</h4></caption>
                 <thead>
                 <tr>
                     <td>
                         <ul id="myTab" class="nav nav-tabs">
-                            <li class="active"><a href="/teams/${currentTeam.id?c}/manage">Management</a></li>
-                            <li><a href="/teams/${currentTeam.id?c}/permission">Permission</a></li>
+                            <li class="active"><a href="/teams/${currentTeam.id?c}/manage">组员管理</a></li>
+                            <li><a href="/teams/${currentTeam.id?c}/permission">权限管理</a></li>
                         </ul>
                     </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <th class="col-md-2">Member</th>
-                    <th class="col-md-2">Role</th>
-                    <th class="col-md-2">Status</th>
-                    <th class="col-md-2">Operation</th>
+                    <th class="col-md-2">组员</th>
+                    <th class="col-md-2">角色</th>
+                    <th class="col-md-2">状态</th>
+                    <th class="col-md-2">管理</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -85,7 +85,7 @@
     </div>
     <div>
         <button class="btn btn-success btn-sm pull-right" id="refuse-button"
-                onclick="showModal('#addMemberModal');return false;">Add New Member
+                onclick="showModal('#addMemberModal');return false;">新增组员
         </button>
     </div>
 </div>

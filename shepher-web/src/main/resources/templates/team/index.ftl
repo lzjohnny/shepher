@@ -7,7 +7,7 @@
 <div class="container">
     <div>
         <table class="table table-striped">
-            <caption class="caption"><h4>已加入小组</h4></caption>
+            <caption class="caption"><h4> 已加入小组</h4></caption>
         <#if teams?has_content>
             <thead>
             <tr>

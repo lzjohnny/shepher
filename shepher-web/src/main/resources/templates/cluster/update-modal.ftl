@@ -13,7 +13,7 @@
             <div class="modal-body">
                 <fieldset>
                     <div class="form-group">
-                        Update data for path: ${path}
+                        更新该节点数据: ${path}
                     </div>
                 </fieldset>
             </div>

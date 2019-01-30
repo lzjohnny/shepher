@@ -6,11 +6,11 @@
 
 <div class="container">
     <table class="table table-striped">
-        <caption class="caption"><h4>Shepher Clusters</h4></caption>
+        <caption class="caption"><h4>集群列表</h4></caption>
         <thead>
         <tr>
-            <th class="col-md-4">Name</th>
-            <th class="col-md-8">Config</th>
+            <th class="col-md-4">集群名称</th>
+            <th class="col-md-8">Host:Port</th>
         </tr>
         </thead>
         <tbody>

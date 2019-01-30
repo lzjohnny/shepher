@@ -14,7 +14,7 @@
                 <div class="modal-body">
                     <fieldset>
                         <div class="form-group">
-                            <label for="cluster-name" class="col-lg-2 control-label">源集群r</label>
+                            <label for="cluster-name" class="col-lg-2 control-label">源集群</label>
                             <div class="col-lg-8">
                                 <select class="form-control input-sm" id="srcCluster" name="srcCluster">
                                     <#list clusters as cluster>

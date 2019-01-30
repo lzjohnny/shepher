@@ -6,7 +6,7 @@
 
 <div class="container">
     <table class="table table-striped">
-        <caption class="caption"><h4>Zookeeper集群管理</h4></caption>
+        <caption class="caption"><h4> Zookeeper集群管理</h4></caption>
         <thead>
         <tr>
             <th class="col-md-2">集群名称</th>

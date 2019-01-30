@@ -7,17 +7,17 @@
 <div class="container">
     <div>
         <table class="table table-striped">
-            <caption class="caption"><h4>${currentTeam.name}</h4></caption>
+            <caption class="caption"><h4>小组 ${currentTeam.name}</h4></caption>
             <thead>
             <tr>
                 <td>
                     <ul id="myTab" class="nav nav-tabs">
                     <#if isMaster == true>
-                        <li><a href="/teams/${currentTeam.id?c}/manage">Management</a></li>
+                        <li><a href="/teams/${currentTeam.id?c}/manage">组员管理</a></li>
                     <#else>
-                        <li><a href="/teams/${currentTeam.id?c}/members">Members</a></li>
+                        <li><a href="/teams/${currentTeam.id?c}/members">组员列表</a></li>
                     </#if>
-                        <li class="active"><a href="/teams/${currentTeam.id?c}/permission">Permission</a></li>
+                        <li class="active"><a href="/teams/${currentTeam.id?c}/permission">权限管理</a></li>
                     </ul>
                 </td>
                 <td></td>
@@ -25,9 +25,9 @@
             </tr>
             <#if authorizedPermissions?has_content  || pendingPermissions?has_content>
             <tr>
-                <th class="col-md-2">Cluster</th>
-                <th class="col-md-2">Path</th>
-                <th class="col-md-2">Status</th>
+                <th class="col-md-2">已授权集群</th>
+                <th class="col-md-2">已授权目录</th>
+                <th class="col-md-2">授权状态</th>
             </tr>
             </#if>
             </thead>
@@ -63,7 +63,7 @@
 <#if isMaster == true>
     <div>
         <button class="btn btn-success btn-sm  pull-right" id="refuse-button"
-                onclick="showModal('#applyPermissionModal');return false;">Apply Permission
+                onclick="showModal('#applyPermissionModal');return false;">申请权限
         </button>
     </div>
     <#include "apply_permission-modal.ftl">
